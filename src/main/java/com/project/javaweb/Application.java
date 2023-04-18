@@ -28,13 +28,13 @@ public class Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Category ct1 = new Category(1L, "ELETRONICS");
-		Category ct2 = new Category(2L, "BOOKS");
+		Category ct1 = new Category(null, "ELETRONICS");
+		Category ct2 = new Category(null, "BOOKS");
 
-		Product p1 = new Product(1L, "TV", 2200.00, ct1);
-		Product p2 = new Product(2L, "Domain Driven Design", 120.00, ct2);
-		Product p3 = new Product(3L, "PS5", 2800.00, ct1);
-		Product p4 = new Product(4L, "Docker Ebook", 99.90, ct2);
+		Product p1 = new Product(null, "TV", 2200.00, ct1);
+		Product p2 = new Product(null, "Domain Driven Design", 120.00, ct2);
+		Product p3 = new Product(null, "PS5", 2800.00, ct1);
+		Product p4 = new Product(null, "Docker Ebook", 99.90, ct2);
 
 		ct1.getProducts().addAll(Arrays.asList(p1,p3));
 		ct2.getProducts().addAll(Arrays.asList(p2,p4));
